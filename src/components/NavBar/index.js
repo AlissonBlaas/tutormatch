@@ -9,7 +9,7 @@ import { NavLinkStyled, NavStyled } from './styles';
 
 export default function App() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="bg-light" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="bg-light" variant="dark" className='p-3'>
       <Navbar.Brand href="/">
         <Logo />
       </Navbar.Brand>
@@ -25,9 +25,7 @@ export default function App() {
             fontColor={colors.darkColors.lightDarkest}
             borderButton='1px solid'
             widthStyle='100px'
-          >
-            Sign In
-          </Button>
+          />
         </NavStyled>
       </Navbar.Collapse>
     </Navbar>

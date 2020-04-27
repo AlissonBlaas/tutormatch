@@ -1,25 +1,23 @@
 import styled from 'styled-components/macro';
 
 import px2vw from '../../helpers/responsive';
-import { colors } from '../../constants/colors';
 
 export const Button = styled.button`
   background-color: ${props => props.buttonColor};
   width: ${props => props.widthStyle};
   height: ${props => props.heightStyle};
   border-radius: ${px2vw(5)};
-  border: ${props => props.borderButton};;
+  border: ${props => props.borderButton};
   font-size: 1em;
-  font-weight: bold;
   color: ${props => props.fontColor};
   transition-delay: fill 0.1s;
   cursor: pointer;
   &:hover {
-    background-color: ${colors.darkColors.darkBlue};
+    background-color: ${props => props.buttonHoverColor};
     color: white;
   };
-  &:focus {
-    outline:0;
+  :focus {
+    outline: black !important;
   }
 `;
 

@@ -6,4 +6,6 @@ export const colors = {
   },
   green: '#009C38',
   greenButtonHover: '#74EE72',
+  lightGray: '#F2F2F2',
+  filteredButton: '#BDBDBD',
 };
