@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import px2vw from '../helpers/responsive';
 
-export const Global = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
@@ -18,6 +18,12 @@ export const Global = createGlobalStyle`
       font-size: ${px2vw(16)};
     }
   }
+  @font-face {
+    font-family: 'Avenir';
+    src: url('../assets/fonts/Avenir.ttc') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 `;
 
-export default Global;
+export default GlobalStyles;

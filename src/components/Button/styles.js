@@ -8,15 +8,15 @@ export const Button = styled.button`
   width: ${props => props.widthStyle};
   height: ${props => props.heightStyle};
   border-radius: ${px2vw(5)};
-  border: ${props => props.borderButton};
+  border: ${props => props.borderButton};;
   font-size: 1em;
-  font-family: 'Roboto';
   font-weight: bold;
   color: ${props => props.fontColor};
-  transition: fill 0.25s;
+  transition-delay: fill 0.1s;
   cursor: pointer;
   &:hover {
-    background-color: ${colors.greenButtonHover};
+    background-color: ${colors.darkColors.darkBlue};
+    color: white;
   };
   &:focus {
     outline:0;
@@ -28,7 +28,7 @@ text-align: center;
 width: ${props => props.widthStyle};
 margin: ${px2vw(0)};
 padding:   ${px2vw(0)};
-padding-top: ${px2vw(10)};
+padding-top: ${px2vw(0)};
 display: flex;
 flex-direction: start;
 `;
