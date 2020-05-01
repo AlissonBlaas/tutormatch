@@ -21,6 +21,7 @@ export const BoxText = styled.p`
   color: ${colors.lightDark};
   font-size: 15px;
   text-align: center;
+  width: ${props => props.textWidth};
 `;
 
 export const FilterContainer = styled.div`
@@ -30,7 +31,7 @@ export const FilterContainer = styled.div`
     align-items: center !important;
     width: 100%;
     align-items: ${props => props.alignItems};
-    padding-top: ${px2vw(60)};
+    margin-top: ${px2vw(60)};
 
   @media (max-width: 768px) {
     flex-wrap: nowrap;

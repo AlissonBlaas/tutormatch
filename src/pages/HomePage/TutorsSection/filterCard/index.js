@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 import Button from '../../../../components/Button';
-import px2vw from '../../../../helpers/responsive';
 import { colors } from '../../../../constants/colors';
 import Card from '../../../../components/Card';
 import api from '../../../../services/api';
@@ -55,7 +54,7 @@ const FilterButtons = () => {
     <Container>
       <RowContainer>
         <FilterContainer alignItems='flex-start'>
-          <BoxText widthTextCtn={px2vw(140)}>
+          <BoxText textWidth='80px'>
             Filter by:
           </BoxText>
           <FilterButtonsContainer>
@@ -86,13 +85,9 @@ const FilterButtons = () => {
               widthStyle='120px'
               onClick={showC}
             />
-          </FilterButtonsContainer>
-        </FilterContainer>
-        <FilterContainer>
-          <BoxText widthTextCtn={px2vw(140)}>
-            Sort by:
-          </BoxText>
-          <FilterButtonsContainer>
+            <BoxText textWidth='80px'>
+              Sort by:
+            </BoxText>
             <Button
               text='Name'
               buttonColor={colors.filteredButton}
