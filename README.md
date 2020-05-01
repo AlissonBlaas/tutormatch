@@ -1,4 +1,4 @@
-# Cashin Website
+# Tutormatch Website
 
 ## Pre-requisites & Setup
 
