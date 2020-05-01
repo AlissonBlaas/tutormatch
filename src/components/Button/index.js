@@ -38,12 +38,12 @@ DefaultButton.propTypes = {
   buttonColor: PropTypes.string.isRequired,
   buttonHoverColor: PropTypes.string.isRequired,
   widthStyle: PropTypes.string.isRequired,
-  heightStyle: PropTypes.string.isRequired,
+  heightStyle: PropTypes.string,
   fontColor: PropTypes.string.isRequired,
-  fontSize: PropTypes.string.isRequired,
-  borderButton: PropTypes.string.isRequired,
-  margin: PropTypes.string.isRequired,
-  onClick: PropTypes.object.isRequired,
+  fontSize: PropTypes.string,
+  borderButton: PropTypes.string,
+  margin: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default DefaultButton;

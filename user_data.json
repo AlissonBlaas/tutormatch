@@ -6,7 +6,7 @@
             "first_name":"Allin",
             "last_name":"Greendale",
             "photo":"https://robohash.org/impeditnesciuntut.bmp?size=300x300&set=set1",
-            "city":"Liverpool",
+            "city":"Manchester",
             "students": [
                 {
                     "id": 1,
@@ -65,7 +65,7 @@
             "last_name":
             "Bristoe",
             "photo":"https://robohash.org/velitquioccaecati.jpg?size=300x300&set=set1",
-            "city":"London",
+            "city":"Liverpool",
             "students": [
             ]
         },
@@ -128,7 +128,7 @@
             "first_name":"Marylou",
             "last_name":"Gorrick",
             "photo":"https://robohash.org/etquissoluta.png?size=300x300&set=set1",
-            "city":"Manchester",
+            "city":"London",
             "students": [
               {
                   "id": 1,

@@ -18,6 +18,8 @@ export const Button = styled.button`
     color: white;
   };
   &:focus {
+    background-color: ${props => props.buttonHoverColor};
+    color: white;
     outline:0;
   }
 `;

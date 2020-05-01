@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-import px2vw from '../../../helpers/responsive';
 import { colors } from '../../../constants/colors';
 
 export const Container = styled.div`
@@ -9,6 +8,7 @@ export const Container = styled.div`
   height: 100%;
   width: 100%;
   flex-direction: column;
+  margin-top: 40px;
 `;
 
 export const BoxTitle = styled.p`
@@ -23,33 +23,6 @@ export const BoxText = styled.p`
   text-align: center;
   width: ${props => props.textWidth};
 `;
-
-export const FilterContainer = styled.div`
-    flex-wrap: nowrap;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center !important;
-    width: 100%;
-    align-items: ${props => props.alignItems};
-    margin-top: ${px2vw(60)};
-
-  @media (max-width: 768px) {
-    flex-wrap: nowrap;
-    display: flex;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    align-items: center;
-    width: ${px2vw(768, 768)};
-    height: ${px2vw(100, 768)};
-  }
-
-  @media (min-width: 1024px) {
-    flex-wrap: nowrap;
-    display: flex;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    align-items: center;
-  }`;
 
 export const RowContainer = styled.div`
     flex-wrap: wrap;
@@ -70,12 +43,8 @@ export const RowContainer = styled.div`
 
   @media (min-width: 1024px) {
     display: flex;
+    width: 100%;
+    flex-direction: row;
+    grid-template-columns: 1fr;
+    justify-content: center;
   }`;
-
-export const FilterButtonsContainer = styled.div`
-      flex-wrap: wrap;
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-      width: 100%;
-`;

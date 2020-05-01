@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import UserPhoto from '../../assets/images/user-photo.jpg';
 import {
   Container,
   InsideContainer,
@@ -11,15 +12,13 @@ import {
 } from './style';
 
 const Card = ({
-  userId,
+  userKey,
   userPhoto,
   userFirstName,
   userLastName,
   userCity,
-  studentsId,
-  studentsPhoto,
 }) => (
-  <Container key={userId}>
+  <Container key={userKey}>
     <InsideContainer src={userPhoto} alt='front' />
     <TextStyled textSize='20px'>
       {`${userFirstName} ${userLastName}`}
@@ -33,27 +32,40 @@ const Card = ({
     <TextStyled textSize='12px'>
       Students so far
     </TextStyled>
+
     <RowContainer>
       <ImageStyled
-        key={studentsId}
-        src={studentsPhoto}
+        src={UserPhoto}
+        roundedCircle
+        fluid
+      />
+      <ImageStyled
+        src={UserPhoto}
+        roundedCircle
+        fluid
+      />
+      <ImageStyled
+        src={UserPhoto}
+        roundedCircle
+        fluid
+      />
+      <ImageStyled
+        src={UserPhoto}
         roundedCircle
         fluid
       />
     </RowContainer>
+
   </Container>
 
 );
 
 Card.propTypes = {
-  userId: PropTypes.string.isRequired,
+  userKey: PropTypes.number.isRequired,
   userPhoto: PropTypes.string.isRequired,
   userFirstName: PropTypes.string.isRequired,
   userLastName: PropTypes.string.isRequired,
   userCity: PropTypes.string.isRequired,
-  studentsId: PropTypes.string.isRequired,
-  studentsPhoto: PropTypes.string.isRequired,
-
 };
 
 export default Card;

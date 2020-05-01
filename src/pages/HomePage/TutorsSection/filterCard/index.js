@@ -4,18 +4,17 @@ import Button from '../../../../components/Button';
 import { colors } from '../../../../constants/colors';
 import Card from '../../../../components/Card';
 import api from '../../../../services/api';
+import Line from '../../../../components/Line';
 
 import {
   Container,
   RowContainer,
-  FilterContainer,
-  FilterButtonsContainer,
   BoxText,
 } from '../styles';
 
 const FilterButtons = () => {
   const [ users, setUsers ] = useState([]);
-  const [ filteredUsers, setfilteredUsers ] = useState([null]);
+  const [ filteredUsers, setfilteredUsers ] = useState([]);
   const [ loading, setLoading ] = useState(false);
   useEffect(() => {
     async function loadUsers() {
@@ -32,92 +31,123 @@ const FilterButtons = () => {
     return ('Loading...');
   }
 
-  const A = users.filter(e => e.city === 'Liverpool');
-  const B = users.filter(e => e.city === 'London');
-  const C = users.filter(e => e.city === 'Manchester');
+  const Liverpool = users.filter(e => e.city === 'Liverpool');
+  const London = users.filter(e => e.city === 'London');
+  const Manchester = users.filter(e => e.city === 'Manchester');
+
+  const sortCity = users.sort((a, b) => {
+    if (a.city < b.city) {
+      return -1;
+    }
+    if (a.city > b.city) {
+      return 1;
+    }
+    return 0;
+  });
+
+  const sortName = users.sort((a, b) => {
+    if (a.first_name < b.first_name) {
+      return -1;
+    }
+    if (a.first_name > b.first_name) {
+      return 1;
+    }
+    return 0;
+  });
 
   function showA() {
-    setfilteredUsers(A);
+    setfilteredUsers(Liverpool);
   }
 
   function showB() {
-    setfilteredUsers(B);
+    setfilteredUsers(London);
   }
 
   function showC() {
-    setfilteredUsers(C);
+    setfilteredUsers(Manchester);
   }
   function removeFilter() {
     setfilteredUsers(users);
   }
+
+  function filterByName() {
+    setfilteredUsers(sortName);
+  }
+
+  function filterByCity() {
+    setfilteredUsers(sortCity);
+  }
+
   return (
     <Container>
       <RowContainer>
-        <FilterContainer alignItems='flex-start'>
-          <BoxText textWidth='80px'>
-            Filter by:
-          </BoxText>
-          <FilterButtonsContainer>
-            <Button
-              text='Liverpool'
-              buttonColor={colors.filteredButton}
-              buttonHoverColor={colors.green}
-              fontColor={colors.darkColors.lightDarkest}
-              fontSize='15px'
-              widthStyle='120px'
-              onClick={showA}
-            />
-            <Button
-              text='London'
-              buttonColor={colors.filteredButton}
-              buttonHoverColor={colors.green}
-              fontColor={colors.darkColors.lightDarkest}
-              fontSize='15px'
-              widthStyle='120px'
-              onClick={showB}
-            />
-            <Button
-              text='Manchester'
-              buttonColor={colors.filteredButton}
-              buttonHoverColor={colors.green}
-              fontColor={colors.darkColors.lightDarkest}
-              fontSize='15px'
-              widthStyle='120px'
-              onClick={showC}
-            />
-            <BoxText textWidth='80px'>
-              Sort by:
-            </BoxText>
-            <Button
-              text='Name'
-              buttonColor={colors.filteredButton}
-              buttonHoverColor={colors.green}
-              fontColor={colors.darkColors.lightDarkest}
-              fontSize='15px'
-              widthStyle='120px'
-            />
-            <Button
-              text='City'
-              buttonColor={colors.filteredButton}
-              buttonHoverColor={colors.green}
-              fontColor={colors.darkColors.lightDarkest}
-              fontSize='15px'
-              widthStyle='120px'
-            />
-          </FilterButtonsContainer>
-        </FilterContainer>
+        <div />
+        <BoxText textWidth='80px'>
+          Filter by:
+        </BoxText>
+        <Button
+          text='Liverpool'
+          buttonColor={colors.filteredButton}
+          buttonHoverColor={colors.green}
+          fontColor={colors.darkColors.lightDarkest}
+          fontSize='15px'
+          widthStyle='120px'
+          onClick={showA}
+        />
+        <Button
+          text='London'
+          buttonColor={colors.filteredButton}
+          buttonHoverColor={colors.green}
+          fontColor={colors.darkColors.lightDarkest}
+          fontSize='15px'
+          widthStyle='120px'
+          onClick={showB}
+        />
+        <Button
+          text='Manchester'
+          buttonColor={colors.filteredButton}
+          buttonHoverColor={colors.green}
+          fontColor={colors.darkColors.lightDarkest}
+          fontSize='15px'
+          widthStyle='120px'
+          onClick={showC}
+        />
+
+        <BoxText textWidth='80px'>
+          Sort by:
+        </BoxText>
+        <Button
+          text='Name'
+          buttonColor={colors.filteredButton}
+          buttonHoverColor={colors.green}
+          fontColor={colors.darkColors.lightDarkest}
+          fontSize='15px'
+          widthStyle='120px'
+          onClick={filterByName}
+        />
+        <Button
+          text='City'
+          buttonColor={colors.filteredButton}
+          buttonHoverColor={colors.green}
+          fontColor={colors.darkColors.lightDarkest}
+          fontSize='15px'
+          widthStyle='120px'
+          onClick={filterByCity}
+        />
+        <Line />
         <RowContainer>
           {
             filteredUsers && filteredUsers.map(user => (
-              <Card
-                userId={user.id}
-                userPhoto={user.photo}
-                userFirstName={user.first_name}
-                userLastName={user.last_name}
-                userCity={user.city}
-                studentsId={user.students.id}
-                studentsPhoto={user.students.photo}
-              />
+              <div key={user.id}>
+                <Card
+                  userKey={user.id}
+                  userPhoto={user.photo}
+                  userFirstName={user.first_name}
+                  userLastName={user.last_name}
+                  userCity={user.city}
+                  filteredUsers={users}
+                />
+              </div>
             ))
           }
         </RowContainer>

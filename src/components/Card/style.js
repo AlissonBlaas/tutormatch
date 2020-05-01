@@ -42,8 +42,8 @@ export const TagCity = styled.div`
 
 export const ImageStyled = styled(Image)`
     margin-right: 10px;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     background-color: ${colors.white};
 `;
 
