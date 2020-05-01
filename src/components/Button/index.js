@@ -13,6 +13,7 @@ const DefaultButton = ({
   fontSize,
   borderButton,
   onClick,
+  borderRadius,
 }) => (
   <Container>
     <Button
@@ -25,6 +26,7 @@ const DefaultButton = ({
       fontColor={fontColor}
       fontSize={fontSize}
       borderButton={borderButton}
+      borderRadius={borderRadius}
       onClick={onClick}
       margin={margin}
     >
@@ -42,6 +44,7 @@ DefaultButton.propTypes = {
   fontColor: PropTypes.string.isRequired,
   fontSize: PropTypes.string,
   borderButton: PropTypes.string,
+  borderRadius: PropTypes.string,
   margin: PropTypes.string,
   onClick: PropTypes.func,
 };

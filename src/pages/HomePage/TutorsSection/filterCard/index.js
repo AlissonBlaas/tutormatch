@@ -91,7 +91,9 @@ const FilterButtons = () => {
           buttonHoverColor={colors.green}
           fontColor={colors.darkColors.lightDarkest}
           fontSize='15px'
-          widthStyle='120px'
+          borderRadius='5px 0px 0px 5px'
+          widthStyle='110px'
+          heightStyle='33px'
           onClick={showA}
         />
         <Button
@@ -100,7 +102,9 @@ const FilterButtons = () => {
           buttonHoverColor={colors.green}
           fontColor={colors.darkColors.lightDarkest}
           fontSize='15px'
-          widthStyle='120px'
+          borderRadius='0px'
+          widthStyle='110px'
+          heightStyle='33px'
           onClick={showB}
         />
         <Button
@@ -109,7 +113,9 @@ const FilterButtons = () => {
           buttonHoverColor={colors.green}
           fontColor={colors.darkColors.lightDarkest}
           fontSize='15px'
-          widthStyle='120px'
+          borderRadius='0px 5px 5px 0px'
+          widthStyle='110px'
+          heightStyle='33px'
           onClick={showC}
         />
 
@@ -122,7 +128,9 @@ const FilterButtons = () => {
           buttonHoverColor={colors.green}
           fontColor={colors.darkColors.lightDarkest}
           fontSize='15px'
-          widthStyle='120px'
+          borderRadius='5px 0px 0px 5px'
+          widthStyle='110px'
+          heightStyle='33px'
           onClick={filterByName}
         />
         <Button
@@ -131,7 +139,9 @@ const FilterButtons = () => {
           buttonHoverColor={colors.green}
           fontColor={colors.darkColors.lightDarkest}
           fontSize='15px'
-          widthStyle='120px'
+          borderRadius='0px 5px 5px 0px'
+          widthStyle='110px'
+          heightStyle='33px'
           onClick={filterByCity}
         />
         <Line />

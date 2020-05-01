@@ -6,19 +6,20 @@ import { colors } from '../../constants/colors';
 export const Container = styled.li`
   flex-wrap: wrap;
   display: flex;
-  width: 250px;
+  width: 200px;
   flex-direction: column;
   background-color: ${colors.cardInfos};
-  margin: 15px;
   padding: 15px;
-  border-radius: 5px;
+  margin: 0px 10px;
 
 `;
 
-export const InsideContainer = styled.img`
-  width: 100%;
+export const StyledImage = styled.img`
+  width: 200px;
   height:  150px;
-  justify-content: center;
+  margin: 0px 10px;
+  margin-top: 10px;
+  align-self:  center;
   border-radius: 5px;
   background-color: ${colors.lighCardInfo};
 `;

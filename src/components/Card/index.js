@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import UserPhoto from '../../assets/images/user-photo.jpg';
 import {
   Container,
-  InsideContainer,
+  StyledImage,
   TextStyled,
   TagCity,
   RowContainer,
@@ -18,45 +18,48 @@ const Card = ({
   userLastName,
   userCity,
 }) => (
-  <Container key={userKey}>
-    <InsideContainer src={userPhoto} alt='front' />
-    <TextStyled textSize='20px'>
-      {`${userFirstName} ${userLastName}`}
-    </TextStyled>
-    <TextStyled textSize='12px'>
-      City
-    </TextStyled>
-    <TagCity>
-      {userCity}
-    </TagCity>
-    <TextStyled textSize='12px'>
-      Students so far
-    </TextStyled>
+  <div key={userKey}>
+    <StyledImage src={userPhoto} alt='front' />
+    <Container>
 
-    <RowContainer>
-      <ImageStyled
-        src={UserPhoto}
-        roundedCircle
-        fluid
-      />
-      <ImageStyled
-        src={UserPhoto}
-        roundedCircle
-        fluid
-      />
-      <ImageStyled
-        src={UserPhoto}
-        roundedCircle
-        fluid
-      />
-      <ImageStyled
-        src={UserPhoto}
-        roundedCircle
-        fluid
-      />
-    </RowContainer>
+      <TextStyled textSize='15px'>
+        {`${userFirstName} ${userLastName}`}
+      </TextStyled>
+      <TextStyled textSize='12px'>
+        City
+      </TextStyled>
+      <TagCity>
+        {userCity}
+      </TagCity>
+      <TextStyled textSize='12px'>
+        Students so far
+      </TextStyled>
 
-  </Container>
+      <RowContainer>
+        <ImageStyled
+          src={UserPhoto}
+          roundedCircle
+          fluid
+        />
+        <ImageStyled
+          src={UserPhoto}
+          roundedCircle
+          fluid
+        />
+        <ImageStyled
+          src={UserPhoto}
+          roundedCircle
+          fluid
+        />
+        <ImageStyled
+          src={UserPhoto}
+          roundedCircle
+          fluid
+        />
+      </RowContainer>
+
+    </Container>
+  </div>
 
 );
 
