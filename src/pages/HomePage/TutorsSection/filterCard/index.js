@@ -9,6 +9,7 @@ import Line from '../../../../components/Line';
 import {
   Container,
   RowContainer,
+  ColumnContainer,
   BoxText,
 } from '../styles';
 
@@ -81,69 +82,70 @@ const FilterButtons = () => {
   return (
     <Container>
       <RowContainer>
-        <div />
-        <BoxText textWidth='80px'>
-          Filter by:
-        </BoxText>
-        <Button
-          text='Liverpool'
-          buttonColor={colors.filteredButton}
-          buttonHoverColor={colors.green}
-          fontColor={colors.darkColors.lightDarkest}
-          fontSize='15px'
-          borderRadius='5px 0px 0px 5px'
-          widthStyle='110px'
-          heightStyle='33px'
-          onClick={showA}
-        />
-        <Button
-          text='London'
-          buttonColor={colors.filteredButton}
-          buttonHoverColor={colors.green}
-          fontColor={colors.darkColors.lightDarkest}
-          fontSize='15px'
-          borderRadius='0px'
-          widthStyle='110px'
-          heightStyle='33px'
-          onClick={showB}
-        />
-        <Button
-          text='Manchester'
-          buttonColor={colors.filteredButton}
-          buttonHoverColor={colors.green}
-          fontColor={colors.darkColors.lightDarkest}
-          fontSize='15px'
-          borderRadius='0px 5px 5px 0px'
-          widthStyle='110px'
-          heightStyle='33px'
-          onClick={showC}
-        />
+        <ColumnContainer>
+          <BoxText textWidth='80px'>
+            Filter by:
+          </BoxText>
+          <Button
+            text='Liverpool'
+            buttonColor={colors.filteredButton}
+            buttonHoverColor={colors.green}
+            fontColor={colors.darkColors.lightDarkest}
+            fontSize='15px'
+            borderRadius='5px 0px 0px 5px'
+            widthStyle='110px'
+            heightStyle='33px'
+            onClick={showA}
+          />
+          <Button
+            text='London'
+            buttonColor={colors.filteredButton}
+            buttonHoverColor={colors.green}
+            fontColor={colors.darkColors.lightDarkest}
+            fontSize='15px'
+            borderRadius='0px'
+            widthStyle='110px'
+            heightStyle='33px'
+            onClick={showB}
+          />
+          <Button
+            text='Manchester'
+            buttonColor={colors.filteredButton}
+            buttonHoverColor={colors.green}
+            fontColor={colors.darkColors.lightDarkest}
+            fontSize='15px'
+            borderRadius='0px 5px 5px 0px'
+            widthStyle='110px'
+            heightStyle='33px'
+            onClick={showC}
+          />
+          <BoxText textWidth='80px'>
+            Sort by:
+          </BoxText>
+          <Button
+            text='Name'
+            buttonColor={colors.filteredButton}
+            buttonHoverColor={colors.green}
+            fontColor={colors.darkColors.lightDarkest}
+            fontSize='15px'
+            borderRadius='5px 0px 0px 5px'
+            widthStyle='110px'
+            heightStyle='33px'
+            onClick={filterByName}
+          />
+          <Button
+            text='City'
+            buttonColor={colors.filteredButton}
+            buttonHoverColor={colors.green}
+            fontColor={colors.darkColors.lightDarkest}
+            fontSize='15px'
+            borderRadius='0px 5px 5px 0px'
+            widthStyle='110px'
+            heightStyle='33px'
+            onClick={filterByCity}
+          />
+        </ColumnContainer>
 
-        <BoxText textWidth='80px'>
-          Sort by:
-        </BoxText>
-        <Button
-          text='Name'
-          buttonColor={colors.filteredButton}
-          buttonHoverColor={colors.green}
-          fontColor={colors.darkColors.lightDarkest}
-          fontSize='15px'
-          borderRadius='5px 0px 0px 5px'
-          widthStyle='110px'
-          heightStyle='33px'
-          onClick={filterByName}
-        />
-        <Button
-          text='City'
-          buttonColor={colors.filteredButton}
-          buttonHoverColor={colors.green}
-          fontColor={colors.darkColors.lightDarkest}
-          fontSize='15px'
-          borderRadius='0px 5px 5px 0px'
-          widthStyle='110px'
-          heightStyle='33px'
-          onClick={filterByCity}
-        />
         <Line />
         <RowContainer>
           {

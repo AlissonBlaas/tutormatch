@@ -48,3 +48,17 @@ export const RowContainer = styled.div`
     grid-template-columns: 1fr;
     justify-content: center;
   }`;
+
+export const ColumnContainer = styled.div`
+  
+  @media (min-width: 768px) and (max-width: 768px) {
+    display: flex;
+  }
+  @media (min-width: 1024px) {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  `;
