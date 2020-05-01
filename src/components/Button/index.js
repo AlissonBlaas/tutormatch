@@ -8,8 +8,11 @@ const DefaultButton = ({
   buttonHoverColor,
   widthStyle,
   heightStyle,
+  margin,
   fontColor,
+  fontSize,
   borderButton,
+  onClick,
 }) => (
   <Container>
     <Button
@@ -20,7 +23,10 @@ const DefaultButton = ({
       widthStyle={widthStyle}
       heightStyle={heightStyle}
       fontColor={fontColor}
+      fontSize={fontSize}
       borderButton={borderButton}
+      onClick={onClick}
+      margin={margin}
     >
       {text}
     </Button>
@@ -34,7 +40,10 @@ DefaultButton.propTypes = {
   widthStyle: PropTypes.string.isRequired,
   heightStyle: PropTypes.string.isRequired,
   fontColor: PropTypes.string.isRequired,
+  fontSize: PropTypes.string.isRequired,
   borderButton: PropTypes.string.isRequired,
+  margin: PropTypes.string.isRequired,
+  onClick: PropTypes.object.isRequired,
 };
 
 export default DefaultButton;

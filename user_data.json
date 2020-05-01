@@ -1,0 +1,231 @@
+
+{    
+    "users": [
+        {
+            "id":1,
+            "first_name":"Allin",
+            "last_name":"Greendale",
+            "photo":"https://robohash.org/impeditnesciuntut.bmp?size=300x300&set=set1",
+            "city":"Liverpool",
+            "students": [
+                {
+                    "id": 1,
+                    "first_name": "Melisent",
+                    "last_name": "Holworth",
+                    "photo": "https://robohash.org/occaecatimodidistinctio.bmp?size=300x300&set=set1",
+                    "city": "Bąków"
+                  }, {
+                    "id": 2,
+                    "first_name": "Timi",
+                    "last_name": "Barizeret",
+                    "photo": "https://robohash.org/dolorematquasi.png?size=300x300&set=set1",
+                    "city": "Karangmelok"
+                  }, {
+                    "id": 3,
+                    "first_name": "Bridie",
+                    "last_name": "Coker",
+                    "photo": "https://robohash.org/consequaturreiciendiset.bmp?size=300x300&set=set1",
+                    "city": "Gori"
+                  }, {
+                    "id": 4,
+                    "first_name": "Bronnie",
+                    "last_name": "Maddox",
+                    "photo": "https://robohash.org/temporaquiaet.bmp?size=300x300&set=set1",
+                    "city": "Boucinha"
+                  }
+            ]
+        },
+        {
+            "id":2,
+            "first_name":"Mina",
+            "last_name":"McInally",
+            "photo":"https://robohash.org/animiperspiciatisipsa.jpg?size=300x300&set=set1",
+            "city":"Liverpool",
+            "students": [
+                {
+                    "id": 1,
+                    "first_name": "Terrel",
+                    "last_name": "Bukac",
+                    "photo": "https://robohash.org/quibusdamistefugit.bmp?size=300x300&set=set1",
+                    "city": "Thị Trấn Văn Quan"
+                  }, {
+                    "id": 2,
+                    "first_name": "Pollyanna",
+                    "last_name": "Koenraad",
+                    "photo": "https://robohash.org/hicessequos.png?size=300x300&set=set1",
+                    "city": "Nyrob"
+                  }
+            ]
+        
+        },
+        {
+            "id":3,
+            "first_name":
+            "Angeli",
+            "last_name":
+            "Bristoe",
+            "photo":"https://robohash.org/velitquioccaecati.jpg?size=300x300&set=set1",
+            "city":"London",
+            "students": [
+            ]
+        },
+        {
+            "id":4,
+            "first_name":
+            "Cathlene",
+            "last_name":
+            "Eccleshall",
+            "photo":
+            "https://robohash.org/voluptassedveniam.jpg?size=300x300&set=set1",
+            "city":"London",
+            "students": [
+              {
+                  "id": 1,
+                  "first_name": "Terrel",
+                  "last_name": "Bukac",
+                  "photo": "https://robohash.org/quibusdamistefugit.bmp?size=300x300&set=set1",
+                  "city": "Thị Trấn Văn Quan"
+                }, {
+                  "id": 2,
+                  "first_name": "Pollyanna",
+                  "last_name": "Koenraad",
+                  "photo": "https://robohash.org/hicessequos.png?size=300x300&set=set1",
+                  "city": "Nyrob"
+                }
+          ]
+          
+          },
+        {
+            "id":5,
+            "first_name":"Ozzie",
+            "last_name":"Pellman",
+            "photo":"https://robohash.org/laborumnisiet.png?size=300x300&set=set1",
+            "city":"Manchester",
+            "students": [
+                {
+                    "id": 1,
+                    "first_name": "Basia",
+                    "last_name": "Danzey",
+                    "photo": "https://robohash.org/porrorepellatqui.png?size=300x300&set=set1",
+                    "city": "Tuburan"
+                  }, {
+                    "id": 2,
+                    "first_name": "Mala",
+                    "last_name": "Haney`",
+                    "photo": "https://robohash.org/inventoreasperioreslaborum.png?size=300x300&set=set1",
+                    "city": "Ngembo"
+                  }, {
+                    "id": 3,
+                    "first_name": "Godart",
+                    "last_name": "Sebborn",
+                    "photo": "https://robohash.org/consequunturquasquae.bmp?size=300x300&set=set1",
+                    "city": "Libertad"
+                  }
+            ]
+        },
+        {
+            "id":6,
+            "first_name":"Marylou",
+            "last_name":"Gorrick",
+            "photo":"https://robohash.org/etquissoluta.png?size=300x300&set=set1",
+            "city":"Manchester",
+            "students": [
+              {
+                  "id": 1,
+                  "first_name": "Terrel",
+                  "last_name": "Bukac",
+                  "photo": "https://robohash.org/quibusdamistefugit.bmp?size=300x300&set=set1",
+                  "city": "Thị Trấn Văn Quan"
+                }, {
+                  "id": 2,
+                  "first_name": "Pollyanna",
+                  "last_name": "Koenraad",
+                  "photo": "https://robohash.org/hicessequos.png?size=300x300&set=set1",
+                  "city": "Nyrob"
+                }
+          ]
+          },
+        {
+            "id":7,
+            "first_name":"Sharleen",
+            "last_name":"Stoffers",
+            "photo":"https://robohash.org/maximeharumvoluptates.jpg?size=300x300&set=set1",
+            "city":"Manchester",
+            "students": [
+              ]
+          },
+        {
+            "id":8,
+            "first_name":"Seumas",
+            "last_name":"Jehan",
+            "photo":"https://robohash.org/sitnesciuntnemo.bmp?size=300x300&set=set1",
+            "city":"Manchester",
+            "students": [
+                {
+                    "id": 1,
+                    "first_name": "Basia",
+                    "last_name": "Danzey",
+                    "photo": "https://robohash.org/porrorepellatqui.png?size=300x300&set=set1",
+                    "city": "Tuburan"
+                  }, {
+                    "id": 2,
+                    "first_name": "Mala",
+                    "last_name": "Haney`",
+                    "photo": "https://robohash.org/inventoreasperioreslaborum.png?size=300x300&set=set1",
+                    "city": "Ngembo"
+                  }, {
+                    "id": 3,
+                    "first_name": "Godart",
+                    "last_name": "Sebborn",
+                    "photo": "https://robohash.org/consequunturquasquae.bmp?size=300x300&set=set1",
+                    "city": "Libertad"
+                  }
+            ]
+        },
+        {
+            "id":9,
+            "first_name":"Drusilla",
+            "last_name":"Priter",
+            "photo":"https://robohash.org/illoteneturdolore.bmp?size=300x300&set=set1",
+            "city":"Liverpool",
+            "students": [
+              {
+                  "id": 1,
+                  "first_name": "Terrel",
+                  "last_name": "Bukac",
+                  "photo": "https://robohash.org/quibusdamistefugit.bmp?size=300x300&set=set1",
+                  "city": "Thị Trấn Văn Quan"
+                }, {
+                  "id": 2,
+                  "first_name": "Pollyanna",
+                  "last_name": "Koenraad",
+                  "photo": "https://robohash.org/hicessequos.png?size=300x300&set=set1",
+                  "city": "Nyrob"
+                }
+          ]
+          },
+        {
+            "id":10,
+            "first_name":"Urban",
+            "last_name":"Goff",
+            "photo":"https://robohash.org/eaquerepellatmaiores.jpg?size=300x300&set=set1",
+            "city":"London",
+            "students": [
+              {
+                  "id": 1,
+                  "first_name": "Terrel",
+                  "last_name": "Bukac",
+                  "photo": "https://robohash.org/quibusdamistefugit.bmp?size=300x300&set=set1",
+                  "city": "Thị Trấn Văn Quan"
+                }, {
+                  "id": 2,
+                  "first_name": "Pollyanna",
+                  "last_name": "Koenraad",
+                  "photo": "https://robohash.org/hicessequos.png?size=300x300&set=set1",
+                  "city": "Nyrob"
+                }
+          ]
+          }
+    ]
+    
+}

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-
-import { colors } from '../../../constants/colors';
 import px2vw from '../../../helpers/responsive';
+import { colors } from '../../../constants/colors';
 
 export const Container = styled.div`
   display: flex;
@@ -14,16 +13,9 @@ export const Container = styled.div`
 `;
 
 export const BoxTitle = styled.p`
-  color: ${colors.lightDark};
-  font-size: 4rem;
+  color: ${colors.darkColors.lightDark};
   text-align: center;
-
-  @media (min-width: 768px) {
-    font-size: 2rem;
-  }
-  @media (min-width: 1024px) {
-    font-size: 2rem;
-  }
+  font-size: 30px;
 `;
 
 export const BoxText = styled.p`

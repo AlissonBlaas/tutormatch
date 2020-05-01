@@ -1,5 +1,5 @@
-import React from "react";
-import { Navbar, Nav } from "react-bootstrap";
+import React from 'react';
+import { Navbar, Nav } from 'react-bootstrap';
 
 import Logo from '../../assets/images/tutormatch-logo';
 import Button from '../Button';
@@ -9,15 +9,15 @@ import { NavLinkStyled, NavStyled } from './styles';
 
 export default function App() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="bg-light" variant="dark" className='p-3'>
-      <Navbar.Brand href="/">
+    <Navbar collapseOnSelect expand='lg' bg='bg-light' variant='dark' className='p-3'>
+      <Navbar.Brand href='/'>
         <Logo />
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="mr-auto" />
+      <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+      <Navbar.Collapse id='responsive-navbar-nav'>
+        <Nav className='mr-auto' />
         <NavStyled>
-          <NavLinkStyled href="/Register">Become a Tutor</NavLinkStyled>
+          <NavLinkStyled href='/Register'>Become a Tutor</NavLinkStyled>
           <Button
             text='Sign In'
             buttonColor='white'
@@ -25,6 +25,7 @@ export default function App() {
             fontColor={colors.darkColors.lightDarkest}
             borderButton='1px solid'
             widthStyle='100px'
+            heightStyle='40px'
           />
         </NavStyled>
       </Navbar.Collapse>

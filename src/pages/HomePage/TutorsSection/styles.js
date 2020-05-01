@@ -6,47 +6,21 @@ import { colors } from '../../../constants/colors';
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  margin: ${px2vw(32)};
-  height: 80vh;
+  height: 100%;
+  width: 100%;
   flex-direction: column;
 `;
 
 export const BoxTitle = styled.p`
-  color: ${colors.lightDark};
-  font-size: 4em;
+  color: ${colors.darkColors.lightDark};
   text-align: center;
-
-
-  @media (min-width: 768px) {
-    font-size: 2rem;
-  }
-
-  @media (min-width: 992px) {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  @media (min-width: 1024px) {
-    font-size: 2rem;
-  }
+  font-size: 30px;
 `;
 
 export const BoxText = styled.p`
   color: ${colors.lightDark};
-  font-size: 2rem;
-  padding-left: ${px2vw(32)};
-  padding-right: ${px2vw(20)};
+  font-size: 15px;
   text-align: center;
-  width: ${props => props.widthTextCtn};
-  @media (min-width: 768px) {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-  
-  @media (min-width: 1024px) {
-    font-size: 1em;
-    text-align: center;
-  }
 `;
 
 export const FilterContainer = styled.div`
@@ -54,17 +28,18 @@ export const FilterContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center !important;
-    width: ${px2vw(470)};
-    height: ${px2vw(100)};
+    width: 100%;
     align-items: ${props => props.alignItems};
     padding-top: ${px2vw(60)};
 
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     flex-wrap: nowrap;
     display: flex;
     grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
+    width: ${px2vw(768, 768)};
+    height: ${px2vw(100, 768)};
   }
 
   @media (min-width: 1024px) {
@@ -76,38 +51,30 @@ export const FilterContainer = styled.div`
   }`;
 
 export const RowContainer = styled.div`
-   flex-wrap: nowrap;
+    flex-wrap: wrap;
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
-  justify-content: center;
+    justify-content: center;
 
-  @media (min-width: 768px) {
+  
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    width: 100%;
+    grid-template-columns: 1fr;
+    justify-content: center;
   }
 
   @media (min-width: 1024px) {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
   }`;
 
 export const FilterButtonsContainer = styled.div`
-    flex-wrap: nowrap;
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center;
-
-    @media (min-width: 768px) {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-    }
-
-    @media (min-width: 1024px) {
+      flex-wrap: wrap;
       display: flex;
       align-items: flex-start;
       justify-content: flex-start;
-    }`;
+      width: 100%;
+`;
