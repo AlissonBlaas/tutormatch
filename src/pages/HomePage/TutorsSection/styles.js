@@ -22,6 +22,14 @@ export const BoxText = styled.p`
   font-size: 15px;
   text-align: center;
   width: ${props => props.textWidth};
+  
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+
+  @media (min-width: 1024px) {
+    width: ${props => props.webWidth};
+  }
 `;
 
 export const RowContainer = styled.div`
@@ -51,6 +59,8 @@ export const ColumnContainer = styled.div`
   
   @media (min-width: 768px) and (max-width: 768px) {
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
   @media (min-width: 1024px) {
     display: flex;

@@ -1,7 +1,5 @@
 import styled from 'styled-components/macro';
 
-import px2vw from '../../helpers/responsive';
-
 export const Button = styled.button`
   background-color: ${props => props.buttonColor};
   width: ${props => props.widthStyle};
@@ -27,9 +25,10 @@ export const Button = styled.button`
 export const Container = styled.div`
 text-align: center;
 width: ${props => props.widthStyle};
-margin: ${px2vw(0)};
-padding:   ${px2vw(0)};
-padding-top: ${px2vw(0)};
+margin: 0;
+padding: 0;
+padding-top: 0;
 display: flex;
 flex-direction: start;
+outline: none;
 `;

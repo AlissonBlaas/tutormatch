@@ -86,7 +86,7 @@ const FilterButtons = () => {
     <Container>
       <RowContainer>
         <ColumnContainer>
-          <BoxText textWidth='80px'>
+          <BoxText webWidth='80px'>
             Filter by:
           </BoxText>
           <Button
@@ -125,7 +125,7 @@ const FilterButtons = () => {
             heightStyle='33px'
             onClick={showC}
           />
-          <BoxText textWidth='80px'>
+          <BoxText webWidth='80px'>
             Sort by:
           </BoxText>
           <Button
