@@ -23,8 +23,9 @@ export const BoxText = styled.p`
   text-align: center;
   width: ${props => props.textWidth};
   
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     text-align: center;
+    width: ${props => props.tabletWidth};
   }
 
   @media (min-width: 1024px) {
