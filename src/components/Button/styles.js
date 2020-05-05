@@ -20,7 +20,7 @@ export const Button = styled.button`
   &:focus {
     background-color: ${props => props.buttonHoverColor};
     color: white;
-    outline:0;
+    outline: 0 !important;
   }
 `;
 

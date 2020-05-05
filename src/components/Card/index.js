@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import UserPhoto from '../../assets/images/user-photo.jpg';
 import {
   Container,
   StyledImage,
@@ -17,6 +16,7 @@ const Card = ({
   userFirstName,
   userLastName,
   userCity,
+  filteredUsers,
 }) => (
   <div key={userKey}>
     <StyledImage src={userPhoto} alt='front' />
@@ -36,26 +36,21 @@ const Card = ({
       </TextStyled>
 
       <RowContainer>
-        <ImageStyled
-          src={UserPhoto}
-          roundedCircle
-          fluid
-        />
-        <ImageStyled
-          src={UserPhoto}
-          roundedCircle
-          fluid
-        />
-        <ImageStyled
-          src={UserPhoto}
-          roundedCircle
-          fluid
-        />
-        <ImageStyled
-          src={UserPhoto}
-          roundedCircle
-          fluid
-        />
+        {
+          filteredUsers.students.map(students => (
+            filteredUsers.students === []
+              ? <h3>This tutors dont have students yet</h3>
+              : (
+                <div key={students.id}>
+                  <ImageStyled
+                    src={students.photo}
+                    roundedCircle
+                    fluid
+                  />
+                </div>
+              )
+          ))
+        }
       </RowContainer>
 
     </Container>
@@ -69,6 +64,7 @@ Card.propTypes = {
   userFirstName: PropTypes.string.isRequired,
   userLastName: PropTypes.string.isRequired,
   userCity: PropTypes.string.isRequired,
+  filteredUsers: PropTypes.bool.isRequired,
 };
 
 export default Card;

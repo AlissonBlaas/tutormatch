@@ -11,4 +11,5 @@ export const colors = {
   filteredButton: '#BDBDBD',
   cardInfos: '#DFDFDF',
   lighCardInfo: '#F0F0F0',
+  buttonFilterColor: '#DADADA',
 };

@@ -31,8 +31,6 @@ export const RowContainer = styled.div`
     width: 100%;
     justify-content: center;
 
-  
-
   @media (max-width: 768px) {
     flex-wrap: wrap;
     display: flex;

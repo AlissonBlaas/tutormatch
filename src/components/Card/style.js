@@ -6,7 +6,7 @@ import { colors } from '../../constants/colors';
 export const Container = styled.li`
   flex-wrap: wrap;
   display: flex;
-  width: 200px;
+  width: 250px;
   flex-direction: column;
   background-color: ${colors.cardInfos};
   padding: 15px;
@@ -15,7 +15,7 @@ export const Container = styled.li`
 `;
 
 export const StyledImage = styled.img`
-  width: 200px;
+  width: 250px;
   height:  150px;
   margin: 0px 10px;
   margin-top: 10px;
