@@ -26,7 +26,7 @@ const FilterButtons = () => {
       const response = await api.get('users');
 
       setUsers(response.data);
-      setfilteredUsers(response.data.filter(e => e.city === 'Liverpool'));
+      setfilteredUsers(response.data.filter(user => user.city === 'Liverpool'));
       setLoading(true);
     }
     loadUsers();
@@ -40,8 +40,24 @@ const FilterButtons = () => {
   const London = Filters(users, 'London');
   const Manchester = Filters(users, 'Manchester');
 
-  const sortName = users.sort(user => user.first_name);
-  const sortCity = users.sort(user => user.city);
+  const sortName = [...users].sort((a, b) => {
+    if (a.first_name < b.first_name) {
+      return -1;
+    }
+    if (a.first_name > b.first_name) {
+      return 1;
+    }
+    return 0;
+  });
+  const sortCity = [...users].sort((a, b) => {
+    if (a.city < b.city) {
+      return -1;
+    }
+    if (a.city > b.city) {
+      return 1;
+    }
+    return 0;
+  });
 
   function showA() {
     setfilteredUsers(Liverpool);
@@ -75,7 +91,7 @@ const FilterButtons = () => {
           </BoxText>
           <Button
             text='Liverpool'
-            buttonColor={setfilteredUsers.city === 'Liverpool' ? colors.green : colors.filteredButton}
+            buttonColor={setfilteredUsers.city === 'Liverpool' ? colors.green : colors.buttonFilterColor}
             buttonHoverColor={colors.green}
             fontColor={colors.darkColors.lightDarkest}
             fontSize='15px'

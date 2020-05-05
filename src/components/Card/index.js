@@ -59,12 +59,14 @@ const Card = ({
 );
 
 Card.propTypes = {
-  userKey: PropTypes.number.isRequired,
+  // eslint-disable-next-line react/require-default-props
+  userKey: PropTypes.string,
   userPhoto: PropTypes.string.isRequired,
   userFirstName: PropTypes.string.isRequired,
   userLastName: PropTypes.string.isRequired,
   userCity: PropTypes.string.isRequired,
-  filteredUsers: PropTypes.bool.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  filteredUsers: PropTypes.object.isRequired,
 };
 
 export default Card;

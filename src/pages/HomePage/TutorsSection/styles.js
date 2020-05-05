@@ -57,6 +57,6 @@ export const ColumnContainer = styled.div`
     width: 100%;
     flex-direction: row;
     grid-template-columns: 1fr;
-    justify-content: center;
+    justify-content: flex-start;
   }
   `;
