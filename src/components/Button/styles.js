@@ -8,7 +8,8 @@ export const Button = styled.button`
   border: ${props => props.borderButton};
   font-size: ${props => props.fontSize};
   color: ${props => props.fontColor};
-  margin:  ${props => props.margin};;
+  margin:  ${props => props.margin};
+  outline: 0 !important;
   transition-delay: fill 0.1s;
   cursor: pointer;
   &:hover {
@@ -18,7 +19,8 @@ export const Button = styled.button`
   &:focus {
     background-color: ${props => props.buttonHoverColor};
     color: white;
-    outline: none !important;
+    outline: 0 !important;
+    border: none !important;
   }
 `;
 

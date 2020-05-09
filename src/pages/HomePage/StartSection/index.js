@@ -22,6 +22,7 @@ const StartSection = () => (
       borderButton='1px solid'
       widthStyle='150px'
       heightStyle='35px'
+      href='#tutors'
     />
   </Container>
 );

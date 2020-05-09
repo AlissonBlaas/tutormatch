@@ -6,7 +6,7 @@ import Card from '../../../../components/Card';
 import api from '../../../../services/api';
 import Line from '../../../../components/Line';
 
-import { Filters } from '../../../../helpers/filters';
+import { Filters, sortCity, sortName } from '../../../../helpers/filters';
 import { colors } from '../../../../constants/colors';
 
 import {
@@ -40,25 +40,6 @@ const FilterButtons = () => {
   const London = Filters(users, 'London');
   const Manchester = Filters(users, 'Manchester');
 
-  const sortName = [...users].sort((a, b) => {
-    if (a.first_name < b.first_name) {
-      return -1;
-    }
-    if (a.first_name > b.first_name) {
-      return 1;
-    }
-    return 0;
-  });
-  const sortCity = [...users].sort((a, b) => {
-    if (a.city < b.city) {
-      return -1;
-    }
-    if (a.city > b.city) {
-      return 1;
-    }
-    return 0;
-  });
-
   function showA() {
     setfilteredUsers(Liverpool);
   }
@@ -75,11 +56,11 @@ const FilterButtons = () => {
   }
 
   function filterByName() {
-    setfilteredUsers(sortName);
+    setfilteredUsers(sortName(users));
   }
 
   function filterByCity() {
-    setfilteredUsers(sortCity);
+    setfilteredUsers(sortCity(users));
   }
 
   return (
@@ -91,7 +72,7 @@ const FilterButtons = () => {
           </BoxText>
           <Button
             text='Liverpool'
-            buttonColor={setfilteredUsers.city === 'Liverpool' ? colors.green : colors.buttonFilterColor}
+            buttonColor={colors.buttonFilterColor}
             buttonHoverColor={colors.green}
             fontColor={colors.darkColors.lightDarkest}
             fontSize='15px'

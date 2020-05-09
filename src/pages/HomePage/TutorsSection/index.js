@@ -9,7 +9,7 @@ import {
 } from './styles';
 
 const TutorsSection = () => (
-  <Container>
+  <Container id='#tutors'>
     <BoxTitle>
       Our Tutors
     </BoxTitle>
