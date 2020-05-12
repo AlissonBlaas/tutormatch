@@ -54,7 +54,15 @@ export const RowContainer = styled.div`
     flex-direction: row;
     grid-template-columns: 1fr;
     justify-content: center;
-  }`;
+  }
+  @media (max-width: 1024px) {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  `;
 
 export const ColumnContainer = styled.div`
   
@@ -70,4 +78,6 @@ export const ColumnContainer = styled.div`
     grid-template-columns: 1fr;
     justify-content: flex-start;
   }
+
+  
   `;

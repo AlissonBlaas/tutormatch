@@ -22,6 +22,12 @@ export const Button = styled.button`
     outline: 0 !important;
     border: none !important;
   }
+  &:active {
+    background-color: ${props => props.buttonHoverColor};
+    color: white;
+    outline: 0 !important;
+    border: none !important;
+  }
 `;
 
 export const Container = styled.div`

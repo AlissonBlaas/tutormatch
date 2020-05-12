@@ -18,6 +18,8 @@ import {
 
 const FilterButtons = () => {
   const [ users, setUsers ] = useState([]);
+  const [ buttonColor, setButtonColor ] = useState('Liverpool');
+  const [ textColor, setTextColor ] = useState('Liverpool');
   const [ filteredUsers, setfilteredUsers ] = useState([]);
   const [ loading, setLoading ] = useState(false);
 
@@ -42,14 +44,20 @@ const FilterButtons = () => {
 
   function showA() {
     setfilteredUsers(Liverpool);
+    setButtonColor('Liverpool');
+    setTextColor('Liverpool');
   }
 
   function showB() {
     setfilteredUsers(London);
+    setButtonColor('London');
+    setTextColor('London');
   }
 
   function showC() {
     setfilteredUsers(Manchester);
+    setButtonColor('Manchester');
+    setTextColor('Manchester');
   }
   function removeFilter() {
     setfilteredUsers(users);
@@ -57,10 +65,14 @@ const FilterButtons = () => {
 
   function filterByName() {
     setfilteredUsers(sortName(users));
+    setButtonColor('Name');
+    setTextColor('Name');
   }
 
   function filterByCity() {
     setfilteredUsers(sortCity(users));
+    setButtonColor('City');
+    setTextColor('City');
   }
 
   return (
@@ -70,11 +82,12 @@ const FilterButtons = () => {
           <BoxText webWidth='80px' tabletWidth='80px'>
             Filter by:
           </BoxText>
+
           <Button
             text='Liverpool'
-            buttonColor={colors.buttonFilterColor}
+            buttonColor={buttonColor === 'Liverpool' ? colors.green : colors.buttonFilterColor}
             buttonHoverColor={colors.green}
-            fontColor={colors.darkColors.lightDarkest}
+            fontColor={textColor === 'Liverpool' ? colors.white : colors.darkColors.lightDarkest}
             fontSize='15px'
             borderButton={`1px solid ${colors.filteredButton}`}
             borderRadius='5px 0px 0px 5px'
@@ -84,9 +97,9 @@ const FilterButtons = () => {
           />
           <Button
             text='London'
-            buttonColor={colors.buttonFilterColor}
+            buttonColor={buttonColor === 'London' ? colors.green : colors.buttonFilterColor}
             buttonHoverColor={colors.green}
-            fontColor={colors.darkColors.lightDarkest}
+            fontColor={textColor === 'London' ? colors.white : colors.darkColors.lightDarkest}
             fontSize='15px'
             borderButton={`1px solid ${colors.filteredButton}`}
             borderRadius='0px'
@@ -96,9 +109,9 @@ const FilterButtons = () => {
           />
           <Button
             text='Manchester'
-            buttonColor={colors.buttonFilterColor}
+            buttonColor={buttonColor === 'Manchester' ? colors.green : colors.buttonFilterColor}
             buttonHoverColor={colors.green}
-            fontColor={colors.darkColors.lightDarkest}
+            fontColor={textColor === 'Manchester' ? colors.white : colors.darkColors.lightDarkest}
             fontSize='15px'
             borderButton={`1px solid ${colors.filteredButton}`}
             borderRadius='0px 5px 5px 0px'
@@ -111,9 +124,9 @@ const FilterButtons = () => {
           </BoxText>
           <Button
             text='Name'
-            buttonColor={colors.buttonFilterColor}
+            buttonColor={buttonColor === 'Name' ? colors.green : colors.buttonFilterColor}
             buttonHoverColor={colors.green}
-            fontColor={colors.darkColors.lightDarkest}
+            fontColor={textColor === 'Name' ? colors.white : colors.darkColors.lightDarkest}
             fontSize='15px'
             borderButton={`1px solid ${colors.filteredButton}`}
             borderRadius='5px 0px 0px 5px'
@@ -123,9 +136,9 @@ const FilterButtons = () => {
           />
           <Button
             text='City'
-            buttonColor={colors.buttonFilterColor}
+            buttonColor={buttonColor === 'City' ? colors.green : colors.buttonFilterColor}
             buttonHoverColor={colors.green}
-            fontColor={colors.darkColors.lightDarkest}
+            fontColor={textColor === 'City' ? colors.white : colors.darkColors.lightDarkest}
             fontSize='15px'
             borderButton={`1px solid ${colors.filteredButton}`}
             borderRadius='0px 5px 5px 0px'
@@ -133,6 +146,7 @@ const FilterButtons = () => {
             heightStyle='33px'
             onClick={filterByCity}
           />
+
         </ColumnContainer>
 
         <Line />
@@ -141,7 +155,7 @@ const FilterButtons = () => {
             filteredUsers && filteredUsers.map(user => (
               <div key={user.id}>
                 <Card
-                  userPhoto={user.photo === 'unknown' ? UserPhoto : user.photo}
+                  userPhoto={user.photo === 'undefined' ? UserPhoto : user.photo}
                   userFirstName={user.first_name}
                   userLastName={user.last_name}
                   userCity={user.city}

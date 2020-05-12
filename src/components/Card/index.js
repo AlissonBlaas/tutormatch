@@ -39,7 +39,12 @@ const Card = ({
         {
           filteredUsers.students.map(students => (
             filteredUsers.students === []
-              ? <h3>This tutors dont have students yet</h3>
+              ? (
+                <div>
+                  <TextStyled textSize='12px'>This tutors dont have students yet</TextStyled>
+                </div>
+              )
+
               : (
                 <div key={students.id}>
                   <ImageStyled
