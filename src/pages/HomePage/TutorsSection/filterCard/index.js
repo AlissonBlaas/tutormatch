@@ -42,19 +42,19 @@ const FilterButtons = () => {
   const London = Filters(users, 'London');
   const Manchester = Filters(users, 'Manchester');
 
-  function showA() {
+  function FilterByLiverpool() {
     setfilteredUsers(Liverpool);
     setButtonColor('Liverpool');
     setTextColor('Liverpool');
   }
 
-  function showB() {
+  function FilterByLondon() {
     setfilteredUsers(London);
     setButtonColor('London');
     setTextColor('London');
   }
 
-  function showC() {
+  function filterByManchester() {
     setfilteredUsers(Manchester);
     setButtonColor('Manchester');
     setTextColor('Manchester');
@@ -93,7 +93,7 @@ const FilterButtons = () => {
             borderRadius='5px 0px 0px 5px'
             widthStyle='110px'
             heightStyle='33px'
-            onClick={showA}
+            onClick={FilterByLiverpool}
           />
           <Button
             text='London'
@@ -105,7 +105,7 @@ const FilterButtons = () => {
             borderRadius='0px'
             widthStyle='110px'
             heightStyle='33px'
-            onClick={showB}
+            onClick={FilterByLondon}
           />
           <Button
             text='Manchester'
@@ -117,7 +117,7 @@ const FilterButtons = () => {
             borderRadius='0px 5px 5px 0px'
             widthStyle='110px'
             heightStyle='33px'
-            onClick={showC}
+            onClick={filterByManchester}
           />
           <BoxText webWidth='80px' tabletWidth='80px'>
             Sort by:
@@ -155,7 +155,7 @@ const FilterButtons = () => {
             filteredUsers && filteredUsers.map(user => (
               <div key={user.id}>
                 <Card
-                  userPhoto={user.photo === 'undefined' ? UserPhoto : user.photo}
+                  userPhoto={user.photo === [''] ? UserPhoto : user.photo}
                   userFirstName={user.first_name}
                   userLastName={user.last_name}
                   userCity={user.city}

@@ -11,14 +11,13 @@ import {
 } from './style';
 
 const Card = ({
-  userKey,
   userPhoto,
   userFirstName,
   userLastName,
   userCity,
   filteredUsers,
 }) => (
-  <div key={userKey}>
+  <div>
     <StyledImage src={userPhoto} alt='front' />
     <Container>
 
@@ -38,13 +37,12 @@ const Card = ({
       <RowContainer>
         {
           filteredUsers.students.map(students => (
-            filteredUsers.students === []
+            filteredUsers.students === ['']
               ? (
                 <div>
                   <TextStyled textSize='12px'>This tutors dont have students yet</TextStyled>
                 </div>
               )
-
               : (
                 <div key={students.id}>
                   <ImageStyled
@@ -64,14 +62,11 @@ const Card = ({
 );
 
 Card.propTypes = {
-  // eslint-disable-next-line react/require-default-props
-  userKey: PropTypes.string,
   userPhoto: PropTypes.string.isRequired,
   userFirstName: PropTypes.string.isRequired,
   userLastName: PropTypes.string.isRequired,
   userCity: PropTypes.string.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  filteredUsers: PropTypes.object.isRequired,
+  filteredUsers: PropTypes.objectOf(PropTypes.number).isRequired,
 };
 
 export default Card;
